@@ -1,0 +1,1082 @@
+@charset "UTF-8";
+:root {
+  /* Основные шрифты */
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  /* Цвет текста */
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --white-text-color: #ffffff;
+  --footer-contacts-text: rgba(255, 255, 255, 0.6);
+  --accent-text-color: #2196f3;
+  /* Цвет фона */
+  --background-color: #ffffff;
+  --secondary-backgraund-color: #f5f4fa;
+  --dark-background-color: #2f303a;
+  /* Цвет icons svg*/
+  --icons-color: #afb1b8;
+  /* Основной паддинг и маржин в секциях */
+  --primary-section-padding: 94px;
+  --primary-margin: 30px;
+  /* Анимация */
+  --anim-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Общий сброс маржинов */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Убираем нижнее подчеркивание с ссылок */
+a {
+  text-decoration: none;
+  -webkit-transition: color var(--anim-main);
+  transition: color var(--anim-main);
+}
+
+/* Убираем отступы и маркеры на списках */
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ховер и фокус для всех ссылок.*/
+a:hover,
+a:focus {
+  color: var(--accent-text-color);
+}
+
+/* Общие стили на класс секция */
+.section {
+  padding-top: var(--primary-section-padding);
+  padding-bottom: var(--primary-section-padding);
+}
+
+/* Общие стили для контейнера */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Общий шрифт для h2 */
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+/* Нижний бордер на хедере */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Добавляем флексы на основной контейнер хедера */
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Логотип в хедере и футере */
+.logo {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-text-color);
+  text-decoration: none;
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+/* Задаем цвет на лого в хедере и футере */
+.logo__label--black {
+  color: #000000;
+  -webkit-transition: color var(--anim-main);
+  transition: color var(--anim-main);
+}
+.logo__label--black:hover {
+  color: var(--accent-text-color);
+}
+
+.logo__label--white {
+  color: var(--white-text-color);
+  -webkit-transition: color var(--anim-main);
+  transition: color var(--anim-main);
+}
+.logo__label--white:hover {
+  color: var(--accent-text-color);
+}
+
+/* Добавляем флексы на навигацию */
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Маржины на ссылки навигации */
+.header__item {
+  margin-right: 50px;
+}
+.header__item:last-child {
+  margin-right: 0;
+}
+
+/* Добавление паддингов на ссылки навигации */
+.header__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  -webkit-transition: color var(--anim-main);
+  transition: color var(--anim-main);
+}
+
+/* Выделение цветом текущей страницы */
+.header__link--current {
+  color: var(--accent-text-color);
+  /* Добавляем линию под текущей страницей и позиционируем оносительно ссылки */
+}
+.header__link--current:after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-text-color);
+}
+
+/* Добавляем флексы на контакты в хедере */
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Контакты в хедере */
+.contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--secondary-text-color);
+  -webkit-transition: color var(--anim-main);
+  transition: color var(--anim-main);
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  -webkit-transition: fill var(--anim-main);
+  transition: fill var(--anim-main);
+}
+
+/* Секция Герой //////////////*/
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: #C4C4C4;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header.jpg);
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  display: block;
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
+/* Кнопка заказать услугу */
+.hero__btn {
+  padding: 10px 32px;
+  border: 0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: background-color var(--anim-main);
+  transition: background-color var(--anim-main);
+}
+.hero__btn:hover {
+  background-color: #188ce8;
+}
+
+/* //////Секция features//////// */
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features__item {
+  margin-right: 30px;
+}
+.features__item:last-child {
+  margin-right: 0;
+}
+
+.features__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 270px;
+      flex-basis: 270px;
+  height: 120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+/* //////Секция Services////// */
+/* Флексы для секции services*/
+.section--nopaddingtop {
+  padding-top: 0;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Позиционнированный текст на картинках секции Services */
+.services__wrapper {
+  position: relative;
+}
+
+.services__descr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* //////Секция team/////// */
+.section--otherbackground {
+  background-color: #f5f4fa;
+}
+
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+/* Определяем ширину для 4 team-item */
+.team__item {
+  -ms-flex-preferred-size: calc((100% - 90px) / 4);
+      flex-basis: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  background-color: var(--background-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team__item:last-child {
+  margin-right: 0;
+}
+
+/*Паддинги для team-content */
+.team__meta {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team__text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+/* Соцсети для team */
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--icons-color);
+  background-color: #ffffff;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: background-color var(--anim-main), color var(--anim-main);
+  transition: background-color var(--anim-main), color var(--anim-main);
+}
+.socials__link:hover, .socials__link:focus {
+  background-color: var(--accent-text-color);
+  color: white;
+}
+
+.socials__icon {
+  fill: currentColor;
+  -webkit-transition: fill var(--anim-main);
+  transition: fill var(--anim-main);
+}
+
+/* Секция Постоянные клиенты */
+.clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #afb1b8;
+  color: var(--icons-color);
+  -webkit-transition: border-color var(--anim-main), color var(--anim-main);
+  transition: border-color var(--anim-main), color var(--anim-main);
+}
+.clients__link:hover, .clients__link:focus {
+  border-color: var(--accent-text-color);
+}
+
+.clients__icon {
+  fill: currentColor;
+}
+
+/* Фильтр кнопки*/
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Кнопки фильтра */
+.filter__button {
+  padding: 6px 22px;
+  border: 0;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--primary-text-color);
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: color var(--anim-main), background-color var(--anim-main), -webkit-box-shadow var(--anim-main);
+  transition: color var(--anim-main), background-color var(--anim-main), -webkit-box-shadow var(--anim-main);
+  transition: color var(--anim-main), background-color var(--anim-main), box-shadow var(--anim-main);
+  transition: color var(--anim-main), background-color var(--anim-main), box-shadow var(--anim-main), -webkit-box-shadow var(--anim-main);
+}
+.filter__button:hover, .filter__button:focus {
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Сетка для карточек портфолио с одинаковым маржином 30рх */
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(-1 * var(--primary-margin));
+  margin-left: calc(-1 * var(--primary-margin));
+}
+
+.projects__item {
+  -ms-flex-preferred-size: calc(33.3333333333% - var(--primary-margin));
+      flex-basis: calc(33.3333333333% - var(--primary-margin));
+  margin-left: var(--primary-margin);
+  margin-top: var(--primary-margin);
+}
+
+.projects__link {
+  display: block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: -webkit-box-shadow var(--anim-main);
+  transition: -webkit-box-shadow var(--anim-main);
+  transition: box-shadow var(--anim-main);
+  transition: box-shadow var(--anim-main), -webkit-box-shadow var(--anim-main);
+}
+.projects__link:hover, .projects__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Добавляем текст поверх картинки */
+.projects__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__descr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  width: 100%;
+  height: 100%;
+  color: var(--white-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transition: -webkit-transform var(--anim-main);
+  transition: -webkit-transform var(--anim-main);
+  transition: transform var(--anim-main);
+  transition: transform var(--anim-main), -webkit-transform var(--anim-main);
+}
+.projects__link:focus .projects__descr, .projects__link:hover .projects__descr {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+/* Группируем заголовок и текст и дабавляем бордер в нижнюю часть */
+.projects__meta {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.projects__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+
+.projects__text {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--secondary-text-color);
+}
+
+/* Футер */
+/* Основные отступы секции футер */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--dark-background-color);
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.footer__address-wrapper {
+  margin-right: 70px;
+}
+
+.footer-address {
+  display: block;
+  width: 231px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Текст адреса */
+.footer-address__link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--white-text-color);
+}
+
+.footer-address__email,
+.footer-address__phone {
+  display: inline-block;
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Блок соц-сети футера */
+.footer__text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer .socials__link {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color var(--anim-main);
+  transition: background-color var(--anim-main);
+}
+.footer .socials__link:hover, .footer .socials__link:focus {
+  background-color: var(--accent-text-color);
+}
+
+/* Блок подписка в футере */
+.footer-form {
+  margin-left: 93px;
+}
+
+.footer-form__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.footer-form__input {
+  width: 353px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.footer-form__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 28px 10px 28px;
+  border: 0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: background-color var(--anim-main);
+  transition: background-color var(--anim-main);
+}
+.footer-form__btn:hover {
+  background-color: #188ce8;
+}
+
+.footer-form__icon {
+  margin-left: 10px;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform var(--anim-main);
+  transition: -webkit-transform var(--anim-main);
+  transition: transform var(--anim-main);
+  transition: transform var(--anim-main), -webkit-transform var(--anim-main);
+}
+
+/* Задаем исходное состояние окна в спрятанном состоянии для его анимации: 
+    появляется с масштаба 0,8 с центра (если поменять местами транслейт и склейл - окно будет всплывать из нижнего правого своего угла!!!). И при таком способе не забываем указывать транслейт !! либо такой же как в modal-wrapper либо другие координаты по желанию либо макету */
+.backdrop.is-hidden .modal-wrapper {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-wrapper__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  fill: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: fill var(--anim-main);
+  transition: fill var(--anim-main);
+}
+.modal-wrapper__close-btn:hover {
+  fill: var(--accent-text-color);
+}
+
+/* ////// ФОРМА //////////////////// */
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 40px 39px 40px 41px;
+}
+
+.modal__descr {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #212121;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form__input-wrapper {
+  position: relative;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 4px 10px 4px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  /*аутлайн не убираем, а делаем прозрачным */
+  outline: transparent;
+  -webkit-transition: border-color var(--anim-main);
+  transition: border-color var(--anim-main);
+}
+.form__input:focus {
+  border-color: var(--accent-text-color);
+}
+
+.form__icon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: #212121;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: fill var(--anim-main);
+  transition: fill var(--anim-main);
+  /* При фокусе на инпут первый сосед - иконка меняет цвет */
+}
+.form__input:focus + .form__icon {
+  fill: var(--accent-text-color);
+}
+
+/* Поле комментарий */
+.form__comment {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__comment-field {
+  resize: none;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  -webkit-transition: border-color var(--anim-main);
+  transition: border-color var(--anim-main);
+}
+.form__comment-field:focus {
+  border-color: var(--accent-text-color);
+}
+
+/* Чекбокс формы */
+.form__agreement-wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form__agreement-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+}
+
+.form__agreement-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Рисуем кастомный чекбокс */
+/* Рамка */
+.form__checkbox {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  background-color: #ffffff;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  -webkit-transition: background-color var(--anim-main), border-color var(--anim-main);
+  transition: background-color var(--anim-main), border-color var(--anim-main);
+}
+.form__agreement-input:focus + .form__checkbox {
+  border-color: var(--accent-text-color);
+}
+.form__agreement-input:checked + .form__checkbox {
+  background-color: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+  background-origin: border-box;
+}
+
+/* Инлайн свг отдельной галочки */
+.form__checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.form__link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--accent-text-color);
+}
+
+/* Кнопка Отправить в модалке */
+.form__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px 10px 56px;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--accent-text-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: background-color var(--anim-main);
+  transition: background-color var(--anim-main);
+}
+.form__btn:hover {
+  background-color: #188CE8;
+}
+
+/* Бекдроп желательно привязывать к центру по Х */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  /* Обязательно также указываем в транзишине свойство visibility, иначе при закрытии модалки не сработает анимация  */
+  -webkit-transition: opacity var(--anim-main), visibility var(--anim-main);
+  transition: opacity var(--anim-main), visibility var(--anim-main);
+}
+
+/* Прячем бекдроп при классе is-hidden. Желательно именно так указывать селектор */
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}/*# sourceMappingURL=main.css.map */

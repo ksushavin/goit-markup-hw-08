@@ -1,0 +1,27 @@
+:root {
+    /* Основные шрифты */
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+
+    /* Цвет текста */
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --white-text-color: #ffffff;
+    --footer-contacts-text: rgba(255, 255, 255, 0.6);
+    --accent-text-color: #2196f3;
+
+    /* Цвет фона */
+    --background-color: #ffffff;
+    --secondary-backgraund-color: #f5f4fa;
+    --dark-background-color: #2f303a;
+
+    /* Цвет icons svg*/
+    --icons-color: #afb1b8;
+
+    /* Основной паддинг и маржин в секциях */
+    --primary-section-padding: 94px;
+    --primary-margin: 30px;
+
+    /* Анимация */
+    --anim-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

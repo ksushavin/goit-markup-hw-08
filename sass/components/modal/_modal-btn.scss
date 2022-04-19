@@ -1,0 +1,28 @@
+/* Кнопка Отправить в модалке */
+.form__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px 10px 56px;
+    border: 0;
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #ffffff;
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+
+    transition: background-color var(--anim-main);
+
+    &:hover {
+    background-color: #188CE8;
+}
+}
+

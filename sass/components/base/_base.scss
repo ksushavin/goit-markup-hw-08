@@ -1,0 +1,51 @@
+
+// Сброс стилей
+@import "./reset";
+
+
+// Основные стили
+body {
+    font-family: var(--main-font);
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ховер и фокус для всех ссылок.*/
+a:hover,
+a:focus {
+    color: var(--accent-text-color);
+}
+
+
+/* Общие стили на класс секция */
+.section {
+    padding-top: var(--primary-section-padding);
+    padding-bottom: var(--primary-section-padding);
+}
+
+/* Общие стили для контейнера */
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Общий шрифт для h2 */
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--primary-text-color);
+}

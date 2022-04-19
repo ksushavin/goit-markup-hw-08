@@ -1,0 +1,35 @@
+// Переменные 
+@import "./utils/variables";
+
+@import "./utils/visually-hidden";
+
+// Базовые стили и сброс стилей
+@import "./components/base/base";
+
+// Все блоки хедера
+@import "./components/header/header";
+
+// Секции
+@import "./components/hero";
+@import "./components/features";
+@import "./components/services";
+
+// Секция тим и соцсети к ней
+@import "./components/team";
+@import "./components/socials";
+
+// Сеция клиенты
+@import "./components/clients";
+
+// Фильтр кнопок портфолио
+@import "./components/filter";
+
+// Секция проектов
+@import "./components/projects";
+
+// Секция футер и его блоки
+@import "./components/footer/footer";
+
+// Модальное окно с бекдропом
+@import "./components/modal/backdrop";
+

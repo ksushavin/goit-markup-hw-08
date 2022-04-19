@@ -1,0 +1,21 @@
+/* Блок соц-сети футера */
+.footer__text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    margin-bottom: 20px;
+}
+
+.footer .socials__link {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--anim-main);
+
+    &:hover, &:focus {
+      background-color: var(--accent-text-color);
+    }
+}
+

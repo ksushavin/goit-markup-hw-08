@@ -1,0 +1,37 @@
+/* Фильтр кнопки*/
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+/* Кнопки фильтра */
+.filter__button {
+    padding: 6px 22px;
+    border: 0;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    color: var(--primary-text-color);
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+
+    transition: color var(--anim-main), background-color var(--anim-main), box-shadow var(--anim-main);
+
+    &:hover,
+    &:focus {
+    color: var(--white-text-color);
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+}
+

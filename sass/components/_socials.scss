@@ -1,0 +1,40 @@
+/* Соцсети для team */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    color: var(--icons-color);
+
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: background-color var(--anim-main), color var(--anim-main);
+
+    &:hover,
+    &:focus {
+    background-color: var(--accent-text-color);
+    color: #ffff;
+}
+}
+
+.socials__icon {
+    fill: currentColor;
+    transition: fill var(--anim-main);
+}

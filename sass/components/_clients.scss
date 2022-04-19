@@ -1,0 +1,36 @@
+/* Секция Постоянные клиенты */
+
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.clients__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+.clients__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #afb1b8;
+    color: var(--icons-color);
+
+    transition: border-color var(--anim-main), color var(--anim-main);
+
+    &:hover,
+    &:focus {
+    border-color: var(--accent-text-color);
+}
+}
+
+.clients__icon {
+    fill: currentColor;
+}

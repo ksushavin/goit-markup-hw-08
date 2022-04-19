@@ -1,0 +1,17 @@
+/* Футер */
+/* Основные отступы секции футер */
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--dark-background-color);
+}
+
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+// Подключаем блоки футера
+@import "./footer-address";
+@import "./footer-socials";
+@import "./footer-form";

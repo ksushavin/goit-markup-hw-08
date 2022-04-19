@@ -1,0 +1,43 @@
+/* //////Секция features//////// */
+
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__item {
+    margin-right: 30px;
+
+    &:last-child {
+    margin-right: 0;
+}
+}
+
+.features__wrapper {
+    display: flex;
+    flex-basis: 270px;
+    height: 120px;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F5F4FA;
+
+    margin-bottom: 30px;
+}
+
+.features__title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+}
+
+.features__text {
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--secondary-text-color);
+}

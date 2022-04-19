@@ -1,0 +1,32 @@
+// Подключаем modal-wrapper и form
+@import "./modal-wrapper";
+@import "./modal-form";
+@import "./checkbox";
+@import "./modal-btn";
+
+
+/* Бекдроп желательно привязывать к центру по Х */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    /* Обязательно также указываем в транзишине свойство visibility, иначе при закрытии модалки не сработает анимация  */
+    transition: opacity var(--anim-main), visibility var(--anim-main);
+}
+
+
+/* Прячем бекдроп при классе is-hidden. Желательно именно так указывать селектор */
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

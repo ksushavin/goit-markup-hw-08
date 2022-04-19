@@ -1,0 +1,70 @@
+/* Чекбокс формы */
+.form__agreement-wrapper {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.form__agreement-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: #757575;
+}
+
+.form__agreement-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Рисуем кастомный чекбокс */
+/* Рамка */
+.form__checkbox {
+    position: relative;
+
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    background-color: #ffffff;
+    border: 2px solid #212121;
+    border-radius: 2px;
+
+    transition: background-color var(--anim-main), border-color var(--anim-main);
+
+    .form__agreement-input:focus + & {
+        border-color: var(--accent-text-color);
+    }
+
+    .form__agreement-input:checked + & {
+        background-color: var(--accent-text-color);
+        border-color: var(--accent-text-color);
+        background-origin: border-box;
+    }
+}
+
+
+/* Инлайн свг отдельной галочки */
+.form__checkbox-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__link {
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--accent-text-color);
+}
