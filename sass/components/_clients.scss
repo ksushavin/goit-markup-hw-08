@@ -1,20 +1,53 @@
-/* Секция Постоянные клиенты */
+.section__title-clients {
+    margin-bottom: 30px;
+
+    @include mq(desktop) {
+        margin-bottom: 50px;
+    }
+}
 
 .clients {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    margin-top: -30px;
+    margin-left: -30px;
+
+    @include mq(desktop) {
+        align-items: center;
+        margin-top: 0;
+        margin-left: 0;      
+    } 
 }
 
-.clients__item:not(:last-child) {
-    margin-right: 30px;
-}
+.clients__item {
+    margin-top: 30px;
+    margin-left: 30px;
 
+    @include mq(mobile-only) {
+        flex-basis: calc(100%/2 - 30px); 
+        // margin-top: 30px;
+        // margin-left: 30px; 
+    }
+    @include mq(tablet-only) {
+        flex-basis: calc(100%/3 - 30px);
+        // margin-top: 30px;
+        // margin-left: 30px;
+    }
+    @include mq(desktop) {
+        width: 170px;
+        height: 92px;
+
+        margin-top: 0;
+        margin-left: 0;
+       &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
 
 .clients__link {
     display: flex;
-    width: 170px;
     height: 92px;
     border-radius: 4px;
     justify-content: center;
@@ -27,8 +60,8 @@
 
     &:hover,
     &:focus {
-    border-color: var(--accent-text-color);
-}
+        border-color: var(--accent-text-color);
+    }
 }
 
 .clients__icon {

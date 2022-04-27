@@ -1,20 +1,8 @@
-
 /* Нижний бордер на хедере */
 .header {
+    position: relative;
+}
+
+.header__container {
     border-bottom: 1px solid #ececec;
 }
-
-/* Добавляем флексы на основной контейнер хедера */
-.header__container {
-    display: flex;
-    align-items: center;
-}
-
-// Импортируем лого
-@import "./logo";
-
-// Импортируем навигацию
-@import "./header-nav";
-
-// Импортитуем контакты в хедере
-@import "./contacts";

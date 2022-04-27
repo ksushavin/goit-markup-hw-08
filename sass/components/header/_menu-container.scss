@@ -1,0 +1,30 @@
+.menu-container {
+    width: 100vw;
+    background-color: 
+      var(--background-color);
+
+    @include mq(mobile-only) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      
+      height: 100vh;
+      padding: 48px 40px;
+     
+      &.is-open {
+        display: flex; 
+        flex-direction: column; 
+        z-index: 5;
+      }  
+    }
+        
+     @include mq(tablet) {
+        display: flex;
+        align-items: center;
+    }
+}
+    
+    
+
+   

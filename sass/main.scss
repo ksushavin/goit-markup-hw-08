@@ -2,15 +2,16 @@
 @import "./utils/variables";
 
 @import "./utils/visually-hidden";
+@import "./utils/mixin";
 
 // Базовые стили и сброс стилей
-@import "./components/base/base";
+@import "./components/base/index";
 
 // Все блоки хедера
-@import "./components/header/header";
+@import "./components/header/index";
 
 // Секции
-@import "./components/hero";
+@import "./components/hero/index";
 @import "./components/features";
 @import "./components/services";
 
@@ -28,8 +29,8 @@
 @import "./components/projects";
 
 // Секция футер и его блоки
-@import "./components/footer/footer";
+@import "./components/footer/index";
 
 // Модальное окно с бекдропом
-@import "./components/modal/backdrop";
+@import "./components/modal/index";
 

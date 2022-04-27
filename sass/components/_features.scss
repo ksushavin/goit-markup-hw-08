@@ -1,29 +1,43 @@
-/* //////Секция features//////// */
 
 .features {
-    display: flex;
-    justify-content: space-between;
+    
+    @include mq(tablet-only){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    @include mq(desktop) {
+        display: flex;
+    }
 }
 
 .features__item {
-    margin-right: 30px;
-
-    &:last-child {
-    margin-right: 0;
-}
+    @include mq(mobile-only) {
+        &:not(:last-child){
+           margin-bottom: 30px; 
+        }
+    }
+    @include mq(tablet-only) {
+        flex-basis: calc((100% - 60px)/2);
+        margin: 15px;
+    }
+    @include mq(desktop) {
+        &:not(:last-child) {
+            margin-right: 30px;       
+        }
+    }
 }
 
 .features__wrapper {
     display: flex;
     flex-basis: 270px;
-    height: 120px;
-
     justify-content: center;
     align-items: center;
 
-    background-color: #F5F4FA;
-
+    height: 120px;
     margin-bottom: 30px;
+    
+    background-color: #F5F4FA;
 }
 
 .features__title {

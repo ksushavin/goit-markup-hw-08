@@ -1,0 +1,26 @@
+// Header
+@import "./header";
+
+// Header-nav
+@import "./header-nav";
+
+// Импортируем лого
+@import "./logo";
+
+// Mobile-menu
+@import "./mobile-btn";
+
+// Контейнер навигации и контактов хедера
+@import "./menu-container";
+
+// Навигация в хереде
+@import "./navigation";
+
+// Контейнер для контактов и соцсетей мобменю
+@import "./mobile-menu-group";
+
+// Импортитуем контакты в хедере
+@import "./contacts/index";
+
+// Соцсети в мобменю
+@import "./mobile-socials";

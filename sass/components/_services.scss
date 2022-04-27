@@ -1,8 +1,11 @@
-/* //////Секция Services////// */
 
-/* Флексы для секции services*/
-.section--nopaddingtop {
-    padding-top: 0;
+.section--nopadding-top {
+    display: none;
+
+    @include mq(desktop) {
+        display: block;
+        padding-top: 0;
+    }
 }
 
 .services {

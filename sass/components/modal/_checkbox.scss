@@ -1,4 +1,4 @@
-/* Чекбокс формы */
+
 .form__agreement-wrapper {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -6,12 +6,19 @@
 
 .form__agreement-label {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 11.5px;
+    line-height: 1.16;
 
     color: #757575;
+
+    
+    @include mq(desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .form__agreement-input {
@@ -31,11 +38,12 @@
 /* Рамка */
 .form__checkbox {
     position: relative;
+    flex-shrink: 0;
 
     display: inline-block;
     width: 16px;
     height: 15px;
-    margin-right: 7px;
+    margin-right: 8px;
 
     background-color: #ffffff;
     border: 2px solid #212121;
@@ -54,7 +62,6 @@
     }
 }
 
-
 /* Инлайн свг отдельной галочки */
 .form__checkbox-icon {
     position: absolute;
@@ -63,8 +70,14 @@
     transform: translate(-50%, -50%);
 }
 
+.form__agreement-text {
+    display: inline;
+    margin-right: 4px;
+}
+
 .form__link {
     display: inline-block;
-    margin-left: 4px;
+
+    text-decoration: underline;
     color: var(--accent-text-color);
 }

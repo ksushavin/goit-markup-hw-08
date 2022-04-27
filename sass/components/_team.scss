@@ -1,34 +1,75 @@
-/* //////Секция team/////// */
-.section--otherbackground {
+
+.section--other-background {
     background-color: #f5f4fa;
+
+    .section__title {
+        margin-bottom: 30px;
+    
+        @include mq(desktop) {
+        margin-bottom: 50px;
+        }    
+    }
 }
 
 .team {
-    display: flex;
-    margin-top: 50px;
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -30px;
+        margin-left: -30px;
+    }  
+    @include mq(desktop) {
+        margin-top: 0;
+        margin-left: 0;
+    }
 }
 
-/* Определяем ширину для 4 team-item */
 .team__item {
-    flex-basis: calc((100% - 90px) / 4);
-    margin-right: 30px;
     background-color: var(--background-color);
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
+    box-shadow: 
+        0px 1px 3px rgba(0, 0, 0, 0.12), 
+        0px 1px 1px rgba(0, 0, 0, 0.14), 
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    &:last-child {
-    margin-right: 0;
-}
+    @include mq(mobile-only) {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @include mq(tablet-only) {
+        flex-basis: calc(100%/2 - 30px);
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    @include mq(desktop) {
+        flex-basis: calc((100% - 90px) / 4);
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
-/*Паддинги для team-content */
+.team__pic {
+    @include mq(tablet) {
+        max-width: 354px;
+        max-height: 374px;
+    }
+    @include mq(desktop) {
+        max-width: 270px;
+        max-height: 260px;
+    }
+}
 .team__meta {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    
+    @include mq(desktop) {
+        padding-bottom: 30px;
+    }
 }
-
 .team__title {
     margin-bottom: 10px;
 
@@ -37,7 +78,6 @@
     line-height: 1.19;
     text-align: center;
 }
-
 .team__text {
     margin-bottom: 16px;
 

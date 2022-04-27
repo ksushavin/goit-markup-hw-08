@@ -1,0 +1,18 @@
+
+.contacts {
+    @include mq(mobile-only) {
+        margin-bottom: 64px;
+    }
+    @include mq(tablet) {
+        display: flex;
+        flex-direction: column-reverse; 
+    }
+    @include mq(desktop) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+
+
+

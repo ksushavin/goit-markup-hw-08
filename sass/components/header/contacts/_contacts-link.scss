@@ -1,0 +1,13 @@
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    color: inherit;
+
+    transition: color var(--anim-main);
+
+    &:hover,
+    &:focus {
+        color: #1e8ae2;
+    }
+}

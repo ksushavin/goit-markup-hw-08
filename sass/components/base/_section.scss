@@ -1,0 +1,10 @@
+/* Общие стили на класс секция */
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px; 
+    }
+}

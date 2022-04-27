@@ -1,0 +1,45 @@
+.mobile-socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: -10px;
+    margin-left: -10px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    
+    
+
+    @include mq(tablet) {
+        display: none;
+    }
+}
+.mobile-socials__item {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.mobile-socials__link {
+    display: block; 
+    padding-right: 10px;
+
+    color: var(--accent-text-color);
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    transition: transform var(--anim-main), border-right-color var(--anim-main);
+
+    .mobile-socials__item:last-child & {
+        padding: 0;
+        border: none;
+    }
+
+    &:hover,
+    &:focus {
+        border-right-color: #1e8ae2;
+    }
+}
+
+ 
+

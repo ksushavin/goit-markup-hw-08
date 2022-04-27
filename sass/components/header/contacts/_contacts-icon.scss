@@ -1,0 +1,30 @@
+.contacts__icon {
+    fill: currentColor;
+    transition: fill var(--anim-main);
+
+    @include mq (mobile-only) {
+        display: none;
+    }
+
+    @include mq (tablet) {
+        margin-right: 8px;
+    }
+
+    @include mq (desktop) {
+        margin-right: 10px;
+    }
+}
+
+.contacts__icon-phone {
+    @include mq (tablet-only) {
+        width: 10px;
+        height: 14px;
+    }
+}
+
+.contacts__icon-mail {
+    @include mq (tablet-only) {
+        width: 14px;
+        height: 10px;
+    }
+}

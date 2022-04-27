@@ -1,0 +1,13 @@
+.footer__address-wrapper {
+    @include mq(mobile-only) {
+        margin-bottom: 60px;
+    }
+
+    @include mq(tablet) {
+        margin-right: 165px;
+    }
+
+    @include mq(desktop) {
+        margin-right: 70px;
+    }
+}

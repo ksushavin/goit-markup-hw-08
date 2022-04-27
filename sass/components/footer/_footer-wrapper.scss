@@ -1,0 +1,15 @@
+.footer-wrapper {
+    margin-bottom: 60px;
+
+    @include mq(tablet) {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    @include mq(desktop) {
+        justify-content: flex-start;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+}

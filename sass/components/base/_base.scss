@@ -1,6 +1,4 @@
 
-// Сброс стилей
-@import "./reset";
 
 
 // Основные стили
@@ -13,6 +11,16 @@ body {
     background-color: var(--background-color);
 }
 
+// Чтобы бади не скролилось под мобменю
+.no-scroll {
+    overflow-y: hidden;
+}
+
+picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 img {
     display: block;
     max-width: 100%;
@@ -25,21 +33,6 @@ a:focus {
     color: var(--accent-text-color);
 }
 
-
-/* Общие стили на класс секция */
-.section {
-    padding-top: var(--primary-section-padding);
-    padding-bottom: var(--primary-section-padding);
-}
-
-/* Общие стили для контейнера */
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* Общий шрифт для h2 */
 .section__title {
