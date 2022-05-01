@@ -1,5 +1,5 @@
 .hero {
-    max-width: 480px;
+    max-width: 1600px;
     height: 400px;
     padding-top: 118px;
     padding-bottom: 118px;
@@ -28,7 +28,6 @@
 
     // Фон для таблетки
     @include mq(tablet) {
-        max-width: 768px;
 
         background-image: 
             var(--gradient),
@@ -46,7 +45,6 @@
     
     // Фон для десктопа
     @include mq(desktop) {
-        max-width: 1600px;
         height: 600px;
         padding-top: 200px;
         padding-bottom: 200px;

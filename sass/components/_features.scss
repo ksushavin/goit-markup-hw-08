@@ -46,8 +46,13 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
     text-transform: uppercase;
     color: var(--primary-text-color);
+
+    @include mq(tablet) {
+        text-align: left;
+    }
 }
 
 .features__text {

@@ -18,7 +18,7 @@
     transition: opacity var(--anim-main), visibility var(--anim-main);
 
     @include mq(mobile-only) {
-        padding: 94px 15px;
+        padding: 15px;
     }  
 }
 

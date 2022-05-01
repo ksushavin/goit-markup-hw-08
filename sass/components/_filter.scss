@@ -1,17 +1,19 @@
 /* Фильтр кнопки*/
 .filter {
     display: flex;
-    margin-bottom: 40px;
 
     @include mq(mobile-only) {
         flex-wrap: wrap;
 
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         margin-top: -15px;
         margin-left: -8px;
     }
     @include mq(tablet) {
         justify-content: center;
+        margin-bottom: 30px;
+    }
+    @include mq(desktop) {
         margin-bottom: 50px;
     }
 }

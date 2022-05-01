@@ -6,7 +6,9 @@
         margin-bottom: 30px;
     
         @include mq(desktop) {
-        margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.17;
+            margin-bottom: 50px;
         }    
     }
 }
